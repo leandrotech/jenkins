@@ -28,7 +28,7 @@ pipeline {
         // Quarto stage
         stage('Deploy Backend'){
             steps{            
-                deploy adapters: [tomcat8(credentialsId: 'tomcat-access', path: '', url: 'http://54.174.180.10:8080')], contextPath: 'tasks-backend', war: 'backend/target/tasks-backend.war'                
+                deploy adapters: [tomcat8(credentialsId: 'tomcat-access', path: '', url: 'http://54.210.20.88:8080')], contextPath: 'tasks-backend', war: 'backend/target/tasks-backend.war'                
             }                        
             
         }      
@@ -52,7 +52,7 @@ pipeline {
         // Sétivo stage
         stage('Deploy Frontend'){
             steps{            
-                deploy adapters: [tomcat8(credentialsId: 'tomcat-access', path: '', url: 'http://54.174.180.10:8080')], contextPath: 'tasks', war: 'frontend/target/tasks.war'                
+                deploy adapters: [tomcat8(credentialsId: 'tomcat-access', path: '', url: 'http://54.210.20.88:8080')], contextPath: 'tasks', war: 'frontend/target/tasks.war'                
             }                        
             
         }
